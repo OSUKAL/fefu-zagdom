@@ -1,9 +1,71 @@
 {% import _self as macros %}
 
+{% macro logo() %}
+<a href="{{ route('home') }}">
+   <img
+      src="{{ 'images/logos/logo.png'|asset }}"
+      alt="Zagdom"
+   >
+</a>
+{% endmacro %}
+
+{% macro phone(value) %}
+   <a href="tel:{{ value }}" class="phone">
+      <img
+         src="{{ 'icons/contacts/phone.svg'|asset }}"
+         alt="Телефон"
+         class="phone__icon"
+      >
+      {{ value }}
+   </a>
+{% endmacro %}
+
+{% macro btn() %}
+   <button class="btn" type="button">
+      Оставить заявку
+   </button>
+{% endmacro %}
+
+{% set scope = {
+   menu: [
+      {
+         url: '/',
+         name: 'Реализованные проекты',
+      },
+      {
+         url: '/',
+         name: 'Новости',
+      },
+      {
+         url: '/',
+         name: 'Контакты',
+      },
+   ],
+   phone: '+7 (900) 900-90-90',
+} %}
+
 {% macro content() %}
 
 <div class="container">
-   Header
+   <div class="header__inner">
+      <div class="header__logo">
+         {{ macros.logo }}
+      </div>
+
+      <div class="header__menu">
+         {% include "@partials/nav.twig" with {
+            items: scope.menu,
+         } %}
+      </div>
+
+      <div class="header__phone">
+         {{ macros.phone(scope.phone) }}
+      </div>
+
+      <div class="header__btn">
+         {{ macros.btn }}
+      </div>
+   </div>
 </div>
 
 {% endmacro %}

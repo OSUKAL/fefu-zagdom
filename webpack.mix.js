@@ -1,4 +1,5 @@
-const mix = require('laravel-mix');
+const mix = require('laravel-mix')
+const { resolve } = require('path')
 
 mix
     .setPublicPath('public')
@@ -14,3 +15,5 @@ mix
             './resources/**/*.twig'
         ]
     })
+
+    mix.alias({'uikit-util': resolve(__dirname, 'node_modules/uikit/src/js/util')})
