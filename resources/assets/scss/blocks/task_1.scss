@@ -1,0 +1,18 @@
+.header, .footer {
+   padding: 3rem 0;
+   background: #ccc;
+}
+
+.main {
+   padding: 3rem 0;
+
+   background: #eee;
+}
+
+.hello {
+   margin-bottom: 3rem;
+
+   font-size: 3.5rem;
+   font-weight: 700;
+   color: $text-prm;
+}
