@@ -21,6 +21,7 @@
         "sass-loader": "^12.4.0"
     },
     "dependencies": {
+        "postcss-axis": "^0.1.2",
         "uikit": "^3.9.4"
     }
 }

@@ -42,8 +42,8 @@ body {
 
 /* Blocks */
 
-@import "blocks/layout";
-@import "blocks/container";
-@import "blocks/header";
-@import "blocks/nav";
-@import "blocks/btn";
+@import "../layouts/layout";
+@import "container";
+@import "../components/header/header";
+@import "../components/site-nav/nav";
+@import "btn";

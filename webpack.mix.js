@@ -3,8 +3,10 @@ const { resolve } = require('path')
 
 mix
     .setPublicPath('public')
-    .js('resources/assets/js/app.js', 'build/bundle.js')
-    .sass('resources/assets/scss/style.scss', 'build/bundle.css')
+    .js('resources/scripts/app.js', 'build/bundle.js')
+    .sass('resources/styles/style.scss', 'build/bundle.css', {}, [
+        require('postcss-axis')
+    ])
     .browserSync({
         watch: true,
         proxy: 'localhost',
