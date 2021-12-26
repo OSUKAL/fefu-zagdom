@@ -1,0 +1,7 @@
+.btn {
+   @extend .uk-button;
+
+   &--prm {
+      @extend .uk-button-primary;
+   }
+}

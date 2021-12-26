@@ -1,5 +1,39 @@
 .header {
-   padding: 2.4rem 8.8rem;
-
    background: $wht;
+
+   &__inner {
+      display: flex;
+      align-items: center;
+
+      padding: 2.4rem 0;
+   }
+
+   &__logo {
+      width: 160px;
+      margin-right: 80px;
+   }
+
+   &__phone {
+      margin: 0 24px 0 auto;
+
+      font-family: $ff-sec;
+   }
+}
+
+.phone {
+   display: flex;
+
+   font-size: 1.4rem;
+   line-height: 1.2;
+   color: $d-green;
+
+   &:hover,
+   &:focus,
+   &:active {
+      color: $blck;
+   }
+
+   &__icon {
+      margin-right: 8px;
+   }
 }

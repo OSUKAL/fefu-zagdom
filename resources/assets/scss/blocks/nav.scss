@@ -1,0 +1,21 @@
+.nav {
+   display: flex;
+   list-style-type: none;
+
+   &__item {
+      &:not(:last-child) {
+         margin-right: 2.4rem;
+      }
+   }
+
+   &__link {
+      line-height: 1.2;
+      color: $text-prm;
+
+      &:hover,
+      &:focus,
+      &:active {
+         color: $blck;
+      }
+   }
+}

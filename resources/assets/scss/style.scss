@@ -1,10 +1,9 @@
-// font-family: 'Montserrat', sans-serif;
-@import "uikit";
 @import "vars";
+@import "uikit";
 
 html {
    font-size: 10px;
-   font-family: 'Open Sans', sans-serif;
+   font-family: $ff-prm;
 }
 
 *,
@@ -26,10 +25,19 @@ ul {
    padding: 0;
 }
 
+a {
+   text-decoration: none;
+
+   &:hover {
+      text-decoration: none;
+   }
+}
+
 body {
    margin: 0;
 
    font-size: 1.6rem;
+   line-height: $g-lh;
 }
 
 /* Blocks */
@@ -37,3 +45,5 @@ body {
 @import "blocks/layout";
 @import "blocks/container";
 @import "blocks/header";
+@import "blocks/nav";
+@import "blocks/btn";

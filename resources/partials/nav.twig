@@ -6,20 +6,20 @@
 
 {% macro content(scope) %}
 
-<ul class="nav">
-   {% for item in scope.items %}
-      {% set item = {
-         url: item.url ?? '',
-         name: item.name ?? '',
-      } %}
+   <ul class="nav">
+      {% for item in scope.items %}
+         {% set item = {
+            url: item.url ?? '',
+            name: item.name ?? '',
+         } %}
 
-      <li class="nav__item">
-         <a href="{{ item.url }}" class="nav__link">
-            {{ item.name }}
-         </a>
-      </li>
-   {% endfor %}
-</ul>
+         <li class="nav__item">
+            <a href="{{ item.url }}" class="nav__link">
+               {{ item.name }}
+            </a>
+         </li>
+      {% endfor %}
+   </ul>
 
 {% endmacro %}
 

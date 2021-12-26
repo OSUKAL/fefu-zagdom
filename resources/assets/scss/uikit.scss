@@ -1,10 +1,33 @@
 $global-link-color: #da7d02;
 
+$button-primary-background: $green;
+$button-primary-color: $wht;
+$button-primary-hover-background: darken($button-primary-background, 5%);
+$button-primary-hover-color: $wht;
+$button-primary-active-background: darken($button-primary-background, 10%);
+$button-primary-active-color: $wht;
+
 @import "~uikit/src/scss/variables.scss";
 @import "~uikit/src/scss/mixins.scss";
 
 @mixin hook-card() {
    color: #000;
+}
+@mixin hook-base-link {
+   transition: color .25s ease-in-out;
+}
+
+@mixin hook-button {
+   padding: 0 40px;
+
+   font-family: $ff-prm;
+   font-weight: $fw-med;
+   font-size: 1.4rem;
+   line-height: 49px;
+
+   border-radius: 10px;
+
+   transition: background-color 0.25s ease-in-out;
 }
 
 @import "~uikit/src/scss/uikit.scss";
