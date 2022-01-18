@@ -1,0 +1,59 @@
+html:root {
+   --swiper-pagination-bullet-size: 12px;
+   --swiper-pagination-bullet-horizontal-gap: 8px;
+   --swiper-pagination-color: #{$green};
+   --swiper-pagination-bullet-inactive-color: #{$l-gray};
+   --swiper-pagination-bullet-inactive-opacity: 1;
+   --swiper-navigation-size: 48px;
+   --swiper-navigation-color: white;
+}
+
+.swiper-pagination-bullets {
+   @include vw-sm-down {
+       display: none;
+   }
+}
+
+.swiper-button {
+   &-prev, &-next {
+       background: center no-repeat;
+
+       :root & {
+           width: 48px;
+           background-color: $green;
+           border-radius: 10px;
+
+           @include vw-sm-down {
+               display: none;
+           }
+       }
+
+       &::after {
+           display: none;
+       }
+   }
+
+   &-prev {
+       background-image: url(/assets/icons/btn-p.svg);
+
+       :root & {
+           left: 16px;
+       }
+   }
+
+   &-next {
+       background-image: url(/assets/icons/btn-n.svg);
+
+       :root & {
+           right: 16px;
+       }
+   }
+}
+
+.swiper-horizontal {
+   & > .swiper-pagination-bullets {
+       :root & {
+           bottom: 40px;
+       }
+   }
+}

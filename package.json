@@ -21,7 +21,9 @@
         "sass-loader": "^12.4.0"
     },
     "dependencies": {
+        "install": "^0.13.0",
         "postcss-axis": "^0.1.2",
+        "swiper": "^7.4.1",
         "uikit": "^3.10.0"
     }
 }

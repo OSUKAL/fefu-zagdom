@@ -1,6 +1,8 @@
 // Vars
 $blck: #000;
 $gray: #666;
+$l-gray: #c6c6c6;
+$l-green: #F5F7F3;
 $green: #029F59;
 $d-green: #254741;
 
@@ -21,9 +23,12 @@ $bold: 700;
 
 // Elems
 @import "./elements.scss";
+@import "./swiper.scss";
 
 
 // Components
 @import "../components/header/header.scss";
 @import "../components/site-nav/site-nav.scss";
 @import "../components/contacts/contacts.scss";
+@import "../components/slider/slider.scss";
+@import "../components/featured-section/featured-section.scss";

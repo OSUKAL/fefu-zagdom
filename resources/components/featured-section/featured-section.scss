@@ -1,0 +1,80 @@
+.FeaturedSection {
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-end;
+
+   @include vw-md-down {
+      flex-wrap: wrap;
+   }
+
+   &__description {
+      @include vw-md-up {
+         margin-right: 16px;
+         max-width: 624px;
+      }
+
+      @include vw-md-down {
+         margin-bottom: 33px;
+      }
+   }
+
+   &__title {
+      margin-bottom: 32px;
+
+      font-size: toRem(38px);
+      line-height: 1.2;
+      color: $blck;
+      font-weight: $bold;
+
+      @include vw-sm-down {
+         font-size: toRem(28px);
+      }
+   }
+
+   &__text {
+      font-size: toRem(20px);
+      color: $gray;
+   }
+
+   &__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 16px;
+
+      list-style: none;
+
+      @include vw-sm-down {
+         grid-template-columns: 1fr;
+         grid-gap: 14px;
+         width: 100%;
+      }
+   }
+}
+
+   .FeaturedItem {
+   height: 100%;
+   padding: 24px 24px 0 24px;
+
+   background-color: $l-green;
+
+   border-radius: 20px;
+
+   &__icon {
+      margin-bottom: 26px;
+   }
+
+   &__title {
+      font-family: $sec-ff;
+      font-weight: $med;
+      font-size: toRem(24px);
+      line-height: 1.2;
+      color: $blck;
+   }
+
+   &__text {
+      max-width: 256px;
+
+      font-size: toRem(20px);
+      color: $gray;
+   }
+}
