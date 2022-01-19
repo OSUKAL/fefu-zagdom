@@ -33,5 +33,15 @@
       &:active {
          color: $blck;
       }
+
+      &--white {
+         color: white;
+
+         &:hover,
+         &:focus,
+         &:active {
+            color: white;
+         }
+      }
    }
 }
